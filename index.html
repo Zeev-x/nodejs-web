@@ -1,0 +1,177 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <meta charset="UTF-8" name="keywords">
+    <title>zeev.io</title>
+  </head>
+  <body>
+    <nav>
+      <p class="logo"><button onclick="menu()" id="menu">&#8801;</button> Welcome</p>
+      <ul>
+        <li><button id="home" onclick="home()">Home</button></li>
+        <li><button id="about" onclick="about()">About</button></li>
+      </ul>
+    </nav>
+    <div class="container">
+    <div id="con_menu">
+      <h3>BMKG</h3><br>
+      <button class="btn_menu" onclick="window.open('/gempa')"> • Gempa</button><br><br>
+      <h3>Anime Image</h3><br>
+      <button class="btn_menu" onclick="window.open('/image/?query=azey')"> • Azey</button><br><br>
+      <button class="btn_menu" onclick="window.open('/image/?query=stars')"> • Anime</button><br><br>
+      <button class="btn_menu" onclick="window.open('/image/?query=yor')"> • Yor forger</button><br><br>
+      <button class="btn_menu" onclick="window.open('/image/?query=gawr')"> • Gawr gura</button><br><br>
+      <button class="btn_menu" onclick="window.open('/image/?query=yumeko')"> • Yumeko jabami</button><br><br>
+      <button class="btn_menu" onclick="window.open('/image/?query=houshou')"> • Houshou Marine</button><br><br>
+      <button class="btn_menu" onclick="window.open('/image/?query=kiwora')"> • Kiwora</button><br><br>
+      <button class="btn_menu" onclick="window.open('/image/?query=nsfw')"> • Nsfw</button><br><br>
+      <h3>API</h3><br>
+      <button class="btn_menu" onclick="window.open('/gempa/api')"> • Gempa API</button><br><br>
+      <button class="btn_menu" onclick="window.open('/kiwora/api')"> • kiwora API</button><br><br>
+      <button class="btn_menu" onclick="window.open('/anime/api')"> • Anime API</button><br><br>
+    </div>
+    <div id="con_home">
+      <h3>Tentang website ini</h3>
+      <p>Ini adalah website api yang saya kembangkan secara bertahap jadi suatu saat akan saya update tampilan,sistem dan fitur-fitur yang ada.Maaf jikalau ada salah kata dalam pengetikan dan terimakasih telah berkunjung ke website saya.</p>
+      <br>
+      <h3>Sorce code</h3>
+      <p>Kamu bisa mendapatkan source kode ini secara gratis di github saya dengan mengklik about di pojok kanan atas.</p>
+    </div>
+    <div id="con_about" align="center">
+      <h3>About Zeev-x</h3>
+        <div align="center">
+          <img src="https://zeev-x.github.io/website/view/resource/logo.svg" height="200px">
+        </div>
+        <p><a class="clr" href="https://github.com/Zeev-x/">Zeev-x</a> is a beginner website designer who still needs to learn a lot about designing websites, so if you want to provide input, I will really appreciate it and I'm very grateful for your input. You can find a repository that doesn't know what it's used for on <a class="clr" href="https://github.com/Zeev-x/">Zeev-x's Github</a>.</p>
+    </div>
+    </div>
+    <style>
+      body {
+        background-color: #ffffff;
+        padding: 0px;
+        margin: 0px;
+      }
+      .logo {
+        font-family: Courier;
+        color: #000000;
+        font-size: 30px;
+        font-weight: bold;
+      }
+      ul {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+      }
+      nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 60px;
+        background-clip: #FFFFFF;
+        box-shadow: 2px 2px 12px rgba(0,0,0,0.2);
+        padding: 0px 5%;
+      }
+      nav ul {
+        display: flex;
+      }
+      nav ul li button {
+        margin: 30px;
+        font-family: Monospace;
+        color: #505050;
+        font-size: 15px;
+        font-weight: 700;
+        border: transparent;
+        background-color: transparent;
+      }
+      .container {
+        display: flex;
+        justify-content: space-between;
+      }
+      #menu {
+        font-size: 80%;
+        border: transparent;
+        background-color: transparent;
+        font-family: Monospace;
+      }
+      #con_menu {
+        display: none;
+        width: 30%;
+        margin: left;
+        justify-content: space-between;
+        box-shadow: 2px 2px 12px black;
+        padding-bottom: 0%;
+      }
+      #con_menu h3 {
+        background-color: black;
+        padding: 20px;
+        margin: auto;
+        font-family: Courier;
+        color: white;
+      }
+      .btn_menu {
+        border: transparent;
+        background-color: transparent;
+        font-size: 120%;
+        font-family: Monospace;
+        padding-left: 20%;
+      }
+      .btn_menu:active {
+        color: lime;
+      }
+      #con_home,
+      #con_about {
+        width: 85%;
+        display: none;
+        width: 100%;
+        margin: auto;
+        padding-left: 5%;
+        margin-right: 5%;
+      }
+      .clr {
+        color: red;
+      }
+    </style>
+    <script>
+    function home(){
+        var home = document.getElementById("home");
+        var about = document.getElementById("about");
+        var con_home = document.getElementById("con_home");
+        var con_about = document.getElementById("con_about");
+        document.getElementById('con_menu').style.display="none";
+        document.getElementById('menu').innerHTML="&#8801;";
+          home.style.color = "red";
+          about.style.color = "black";
+          con_home.style.display = "block";
+          con_about.style.display = "none";
+      }
+      
+      function about(){
+        var home = document.getElementById("home");
+        var about = document.getElementById("about");
+        var con_home = document.getElementById("con_home");
+        var con_about = document.getElementById("con_about");
+        document.getElementById('con_menu').style.display="none";
+        document.getElementById('menu').innerHTML="&#8801;";
+          home.style.color = "black";
+          about.style.color = "red";
+          con_home.style.display = "none";
+          con_about.style.display = "block";
+      }
+      
+      
+      function menu(){
+        var x = document.getElementById('menu').innerHTML;
+        if(x=="x"){;
+          document.getElementById('menu').innerHTML="&#8801;";
+          document.getElementById('con_menu').style.display="none";
+        } else {
+          document.getElementById('menu').innerHTML="x";
+          document.getElementById('con_menu').style.display="block";
+        }
+      }
+      
+      window.onload = home();
+    </script>
+  </body>
+</html>
